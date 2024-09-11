@@ -4,16 +4,16 @@ import Skills from './skills';
 import Projects from './project';
 import Contact from './contact';
 import Header from './header';
-
+import React from 'react';
 const Main = () => {
   return (
     <>
-      
+
       <Header />
       <div className='container-3-columns'>
         
         {/* <div className='container container1 '>
-        <About />
+         <About />
 
         </div> */}
         <div className='container container2' >
