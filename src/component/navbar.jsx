@@ -5,7 +5,7 @@ const Navbar = () => {
         <div className="nav-container">
             <div className="logo">
                 <Link href="/">
-                    Faris's Portfolio
+                    Faris&apos;s Portfolio
                 </Link>
             </div>
             <a href="https://drive.google.com/file/d/1fsRBsmv1T7EP8XIL-OVsyUedR4nOHzTw/view?usp=sharing" className="cta-btn">Resume</a>
