@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Subtitle from "./utils/subtitle";
-import TypewriterIntro from "./utils/typeWriterIntro";
 const Hero = () => {
   return (
     <div className="hero-container">
