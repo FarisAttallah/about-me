@@ -3,8 +3,9 @@ import { projectData } from '../../../component/data';
 
 
 const Project = ({ projectId }) => {
-  const { title, details, languages, technologies } = projectData.find((project) => project.id == projectId);
-
+  const project = projectData.find((project) => project.id == projectId);
+  const { title, details, languages, technologies } = project || {};  // Default to an empty object if no project is found
+  
   return (
     <>
     <div className='container-3-columns' >
