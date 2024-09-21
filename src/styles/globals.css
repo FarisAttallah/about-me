@@ -17,7 +17,41 @@
   /* Three columns with the middle one being three times wider */
   gap: 2rem;
 }
+/* Wrapper for the intro text */
+.intro-wrapper {
+  display: flex;
+  font-size: 1em;
+  font-family: 'Courier', monospace; /* Typewriter-style font */
+  white-space: nowrap; /* Prevent wrapping of the text */
+  overflow: hidden; /* Hide the text initially */
+  border-right: 3px solid; /* Create the blinking cursor effect */
+  animation: typing 3s steps(30, end), blink-caret 0.4s step-end infinite; /* Animate typing and caret blinking */
+  margin-left: 5em; 
+  margin-right: 5em; 
+  border-color: transparent;
+}
 
+/* Typing keyframes */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; } /* Adjust this width based on the number of characters */
+}
+
+/* Blinking cursor keyframes */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+/* Initially hidden words */
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+/* Faded-in words */
+.fade-in {
+  opacity: 1;
+}
 body {
   font-family: sans-serif;
   font-size: 16px;
