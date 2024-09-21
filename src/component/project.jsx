@@ -17,8 +17,8 @@ const Projects = () => {
                   </a>
                 </div>
             </div>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <h3>{project.title || 'No Title'}</h3>
+<p>{project.description || 'No Description Available'}</p>
           </div>
         ))
         }
