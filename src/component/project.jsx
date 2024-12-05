@@ -12,7 +12,7 @@ const Projects = () => {
               <div className="small-icons">
                   <a href={`/projects/project/${project.id}`}>
                   <span className="blue">
-                    <i className="fa-solid fa-circle-info"></i>
+                    <i className="fa-solid fa-circle-info fa-bounce fa-lg iconhover"></i>
                   </span>
                   </a>
                 </div>

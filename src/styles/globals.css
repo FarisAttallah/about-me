@@ -44,7 +44,7 @@
 }
 /* Initially hidden words */
 .hidden {
-  opacity: 0;
+  opacity: 0; 
   transition: opacity 0.5s ease; /* Smooth transition */
 }
 
@@ -66,10 +66,9 @@ body {
   background: linear-gradient(180deg, #1d3557,  #a8dadc, #f1faee);
     background-size: 200% 200%;
 
-    -webkit-animation: Animation 5s ease infinite;
-    -moz-animation: Animation 5s ease infinite;
-    animation: Animation 5s ease infinite;
 }
+
+
 
 @-webkit-keyframes Animation {
   0%{background-position:10% 0%}
