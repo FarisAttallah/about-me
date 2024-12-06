@@ -65,9 +65,13 @@ body {
   padding: 0;
   background: linear-gradient(180deg, #1d3557,  #a8dadc, #f1faee);
     background-size: 200% 200%;
-
+height: 100vh;
+display: flex;
+    flex-direction: column;
 }
-
+main {
+  height: 90vh;
+}
 
 
 @-webkit-keyframes Animation {
@@ -171,6 +175,7 @@ hr {
   padding: 2rem 0;
   background-color: #262f4b;
   /* Discord dark background color */
+
 }
 
 .footer-container p {
@@ -320,7 +325,6 @@ li:hover {
   border-radius: 5px;
   box-shadow: 5px 5px 15px rgb(0 0 0 / 50%);
   width: 100%;
-  height: 100%;
   padding: 1rem;
   padding-left: 1rem;
   margin-bottom: 1rem;

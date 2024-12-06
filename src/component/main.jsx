@@ -1,5 +1,4 @@
 import Hero from './hero';
-import About from './about';
 import Skills from './skills';
 import Projects from './project';
 import Contact from './contact';
@@ -12,10 +11,7 @@ const Main = () => {
       <Header />
       <div className='container-3-columns'>
         
-        {/* <div className='container container1 '>
-         <About />
-
-        </div> */}
+        
         <div className='container container2' >
         <Skills />
         <Contact/>
