@@ -1,15 +1,16 @@
 import React from 'react';
 import { projectData } from '../../../component/data';
 
-
 const Project = ({ projectId }) => {
   const project = projectData.find((project) => project.id == projectId);
   const { title, details, languages, technologies } = project || {};  // Default to an empty object if no project is found
   
   return (
-    <>
+    <div className='fullHeight'>
+
+
     <div className='container-3-columns' >
-    <div className="skills-container container container2">
+    <div className="skills-container container left">
         <h2>Languages used</h2>
         <div className="grid-skills">
           {languages &&
@@ -22,7 +23,7 @@ const Project = ({ projectId }) => {
         </div>
       </div>
 
-    <div className="about-container container container1">
+    <div className="about-container container center">
         <h2 className='about-bullet-header'>More about {title}</h2>
         <div>
           <div className="about-text">
@@ -40,7 +41,7 @@ const Project = ({ projectId }) => {
       </div>
       
 
-      <div className="projects-container container container2">
+      <div className="projects-container container right">
         <h2>Technologies used</h2>
         <div className="three">
           {technologies &&
@@ -58,8 +59,8 @@ const Project = ({ projectId }) => {
         </div>
       </div>
     </div>
-      
-    </>
+    
+    </div>
   );
 };
 

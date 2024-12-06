@@ -11,40 +11,43 @@
   align-items: center;
 }
 
-.container-3-columns {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  /* Three columns with the middle one being three times wider */
-  gap: 2rem;
-}
 /* Wrapper for the intro text */
 .intro-wrapper {
   display: flex;
   font-size: 1em;
-  font-family: 'Courier', monospace; /* Typewriter-style font */
+  font-family: "Courier", monospace; /* Typewriter-style font */
   white-space: nowrap; /* Prevent wrapping of the text */
   overflow: hidden; /* Hide the text initially */
   border-right: 3px solid; /* Create the blinking cursor effect */
   animation: typing 3s steps(30, end), blink-caret 0.4s step-end infinite; /* Animate typing and caret blinking */
-  margin-left: 5em; 
-  margin-right: 5em; 
+  margin-left: 5em;
+  margin-right: 5em;
   border-color: transparent;
 }
 
 /* Typing keyframes */
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; } /* Adjust this width based on the number of characters */
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  } /* Adjust this width based on the number of characters */
 }
 
 /* Blinking cursor keyframes */
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: black; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
 }
 /* Initially hidden words */
 .hidden {
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.5s ease; /* Smooth transition */
 }
 
@@ -56,44 +59,54 @@ body {
   font-family: sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color:rgb(74, 250, 232);
+  background-color: rgb(74, 250, 232);
   /* Discord dark background color */
   color: beige;
   /* Light text color */
   margin: 2rem;
   /* Adjust margin as needed */
   padding: 0;
-  background: linear-gradient(180deg, #1d3557,  #a8dadc, #f1faee);
-    background-size: 200% 200%;
-height: 100vh;
-display: flex;
-    flex-direction: column;
+  background: linear-gradient(180deg, #1d3557, #a8dadc, #f1faee);
+  background-size: 200% 200%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 main {
-  height: 90vh;
+  height: 85vh;
 }
-
 
 @-webkit-keyframes Animation {
-  0%{background-position:10% 0%}
-  50%{background-position:91% 100%}
-  100%{background-position:10% 0%}
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
 }
 @-moz-keyframes Animation {
-  0%{background-position:10% 0%}
-  50%{background-position:91% 100%}
-  100%{background-position:10% 0%}
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
 }
-@keyframes Animation { 
-  0%{background-position:10% 0%}
-  50%{background-position:91% 100%}
-  100%{background-position:10% 0%}
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    width: 100%;
-    padding: 0 2rem;
+@keyframes Animation {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
   }
 }
 
@@ -108,17 +121,12 @@ a {
 
 a:hover {
   transition: all 0.5s ease-in-out;
-  color: rgb(127, 205, 231)
+  color: rgb(127, 205, 231);
 }
 
 li {
   list-style: none;
 }
-
-
-
-
-
 
 .nav-container .logo {
   font-size: 1.5rem;
@@ -126,9 +134,9 @@ li {
 }
 
 .cta-btn {
-  background-color: #7289DA;
+  background-color: #7289da;
   /* Discord button color */
-  color: #FFFFFF;
+  color: #ffffff;
   /* Light text color */
   /* background-color: #FFCC1A;
     color: #1D1E20; */
@@ -142,7 +150,7 @@ li {
 }
 
 .cta-btn:hover {
-  background-color: #677BC4;
+  background-color: #677bc4;
   /* Discord button hover color */
 
   /* background-color: #DADADB; */
@@ -151,19 +159,18 @@ li {
 /* Footer */
 hr {
   border: none;
-  background-color: #58626F;
+  background-color: #58626f;
   /* Discord footer hr color */
   height: 1px;
   width: 80%;
-  margin: 0 auto;
-}
+  
+  margin: 2rem auto 1rem auto;
 
-@media screen and (max-width: 768px) {
-  hr {
-    width: 100%;
-  }
 }
-
+.fullHeight {
+  height: 100%;
+  display: grid;
+}
 .blue {
   color: #262f4b;
 }
@@ -175,12 +182,17 @@ hr {
   padding: 2rem 0;
   background-color: #262f4b;
   /* Discord dark background color */
-
+  grid-row: 3; /* Discord dark background color */
 }
 
+@media (max-width: 768px) {
+  .footer-container {
+    grid-row: 3; /* Discord dark background color */
+  }
+}
 .footer-container p {
   font-size: 0.8rem;
-  color: #FFFFFF;
+  color: #ffffff;
   /* Light text color */
 }
 
@@ -189,18 +201,17 @@ hr {
   justify-content: space-between;
   align-items: center;
   gap: 0 1rem;
-
 }
 
 .footer-container .social_icons a {
-  color: #7289DA;
+  color: #7289da;
   /* Discord social icons color */
   font-size: 1.5rem;
   transition: all 0.5s ease-in-out;
 }
 
 .footer-container .social_icons a:hover {
-  color: #677BC4;
+  color: #677bc4;
   /* Discord social icons hover color */
 }
 
@@ -212,6 +223,67 @@ hr {
   padding: 0.5rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
+}
+.container-3-columns {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  /* Three columns with the middle one being three times wider */
+  gap: 2rem;
+  grid-template-areas: "left center right"; /* Desktop order */
+}
+/* Layout for mobile devices */
+@media (max-width: 768px) {
+  .container-3-columns {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 1rem; /* Adjust spacing between rows */
+    grid-template-areas:
+      "center"
+      "right"
+      "left "; /* Phone order */
+  }
+
+  .container-3-columns > div {
+    margin: 0 auto; /* Center-aligns the content */
+  }
+}
+
+.center {
+  transition: all 0.5s ease-in-out;
+  color: #1d1e20;
+  background-image: url("/images/backgroundcss.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  grid-area: center;
+  height: 70%;
+}
+
+.left {
+  transition: all 0.5s ease-in-out;
+
+  background-color: #262f4b;
+  height: fit-content;
+  grid-area: left;
+  /* Discord theme color */
+}
+
+.right {
+  transition: all 0.5s ease-in-out;
+
+  background-color: #262f4b;
+  height: fit-content;
+  grid-area: right;
+  /* Discord theme color */
+}
+
+.container4 {
+  background-color: #5865f2;
+  /* Discord theme color */
+}
+
+.container5 {
+  background-color: #ffa726;
+  /* Discord theme color */
 }
 
 .container1:hover {
@@ -228,26 +300,16 @@ hr {
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 768px) {
-  .about-text-card {
-    width: 100%;
-  }
-
-  .container {
-    width: 70%;
-  }
-}
-
 .about-text-card {
   border-radius: 1rem;
   border-width: 2rem;
-  border-color: #264DE4;
+  border-color: #264de4;
   height: 4rem;
   padding: 1rem;
   margin-bottom: 1rem;
   background-color: #8d8f93;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
-  color: #1D1E20;
+  color: #1d1e20;
 }
 
 ol {
@@ -256,7 +318,6 @@ ol {
 }
 
 li {
-
   color: whitesmoke;
   position: relative;
   counter-increment: list;
@@ -264,7 +325,7 @@ li {
   margin: 2rem 0 0 0;
   padding: 2rem 1rem 1rem;
   box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
-  border-radius: 0.50rem;
+  border-radius: 0.5rem;
 }
 
 .about-bullet-header {
@@ -279,25 +340,21 @@ li {
 
 .about-list {
   list-style-type: upper-roman;
-  border: 2px solid #DADADB;
+  border: 2px solid #dadadb;
   transition: all 0.5s ease-in-out;
-  color: #1D1E20;
+  color: #1d1e20;
   background-color: rgb(250, 250, 247);
-
-
 }
 
 .about-list:hover {
-  color: #1D1E20;
-
+  color: #1d1e20;
 }
 
 li:hover {
   transition: all 0.5s ease-in-out;
   background-color: rgb(223, 223, 223);
-  color: #1D1E20;
+  color: #1d1e20;
 }
-
 
 .skills-container.container {
   padding: 2rem;
@@ -308,9 +365,6 @@ li:hover {
   padding: 2rem;
   margin-bottom: 2rem;
 }
-
-
-
 
 /* Navbar */
 .nav-container {
@@ -331,53 +385,16 @@ li:hover {
   margin-top: 1rem;
   /* background-color: #1D1E20; */
 }
-.container1 {
-  transition: all 0.5s ease-in-out;
-  color: #1D1E20;
-  background-image: url("/images/backgroundcss.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  /* background-color: rgb(255, 255, 255); */
-  /* Discord theme color */
-}
-
-
-.container2 {
-  transition: all 0.5s ease-in-out;
-
-  background-color: #262f4b;
-  height: fit-content;
-  /* Discord theme color */
-}
-
-.container3 {
-  transition: all 0.5s ease-in-out;
-
-  background-color: #5f5353;
-  /* Discord theme color */
-}
-
-.container4 {
-  background-color: #5865F2;
-  /* Discord theme color */
-}
-
-.container5 {
-  background-color: #FFA726;
-  /* Discord theme color */
-}
 
 /* Hero */
 
 .hero-container {
   height: 90vh;
   display: flex;
-  justify-content: center;
+  
   align-items: center;
   flex-direction: column;
-  padding: 0.5rem;
-
+  padding: 4rem;
 }
 
 .hero-container .profile-img {
@@ -392,12 +409,6 @@ li:hover {
   text-align: center;
   margin: 1rem 0;
   width: 80%;
-}
-
-@media screen and (max-width: 768px) {
-  .hero-container .hero-text {
-    width: 100%;
-  }
 }
 
 .hero-container .hero-text h2 {
@@ -420,12 +431,10 @@ li:hover {
 }
 
 .hero-container .social-icons a {
-  color: #9B9C9D;
+  color: #9b9c9d;
   font-size: 1.5rem;
   transition: all 0.5s ease-in-out;
 }
-
-
 
 /* About */
 .about-container {
@@ -464,7 +473,7 @@ li:hover {
   width: 100%;
   height: 500px;
   object-fit: cover;
-  border: 2px solid #DADADB;
+  border: 2px solid #dadadb;
   filter: grayscale(100%);
   transition: all 0.5s ease-in-out;
   cursor: cell;
@@ -481,20 +490,6 @@ li {
   /* Use disc for filled circles, change to other values like square or none if desired */
   margin-left: 5rem;
   /* Adjust the margin as needed */
-}
-
-@media screen and (max-width: 768px) {
-  .about-container .flex-about {
-    flex-direction: column;
-  }
-
-  .about-container .flex-about .about-text {
-    width: 100%;
-  }
-
-  .about-container .flex-about .about-img {
-    width: 100%;
-  }
 }
 
 /* Skills */
@@ -522,7 +517,7 @@ li {
 
 .skills-container .grid-languages .skill-card {
   background-color: #ffffff;
-  color: #1D1E20;
+  color: #1d1e20;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -538,23 +533,9 @@ li {
   font-size: 1.5rem;
 }
 
-
-
-@media screen and (max-width: 768px) {
-  .skills-container .grid-languages {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .skills-container .grid-skills {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .skills-container .grid-skills .skill-card {
-  background-color: #DADADB;
-  color: #1D1E20;
+  background-color: #dadadb;
+  color: #1d1e20;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -574,20 +555,14 @@ li {
   transform: scale(1.1);
   border: 2px solid #007bff; /* Adds a border on hover */
 }
-@media (max-width: 768px) {
-  .zoom-effect:hover {
-    transform: scale(1.05); /* Smaller zoom on smaller screens */
-  }
-}
 
 .skills-container .grid-skills i {
   font-size: 1.5rem;
 }
 
 .skills-container .grid-skills .html:hover {
-  background-color: #E34F26;
+  background-color: #e34f26;
 }
-
 
 /* Projects */
 .projects-container {
@@ -612,19 +587,13 @@ li {
   gap: 2rem;
 }
 
-@media screen and (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 .project-card {
   border: 1px solid #e6e6e6;
   padding: 20px;
   border-radius: 5px;
   height: fit-content;
   background-color: #ffffff;
-  color: #1D1E20;
+  color: #1d1e20;
 }
 
 .project-card .project-header {
@@ -636,7 +605,7 @@ li {
 
 .project-card .folder-icon {
   font-size: 35px;
-  color: #FFCC17;
+  color: #ffcc17;
 }
 
 .project-header .small-icons {
@@ -648,10 +617,8 @@ li {
 .project-card .small-icons a {
   margin-right: 5px;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-
-
 
 .project-card .project h3 {
   font-size: 20px;
@@ -675,12 +642,6 @@ li {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
-  .contact-container {
-    width: 100%;
-  }
-}
-
 .contact-container h2 {
   font-size: 2rem;
   font-weight: 600;
@@ -694,19 +655,18 @@ li {
   text-align: center;
 }
 .say-hello-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .say-hello-button:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    transform: scale(1.05); /* Grows the button size slightly */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05); /* Grows the button size slightly */
 }
-
