@@ -16,7 +16,11 @@ jobs:
 
       - name: Deploy to Render
         run: | 
-          curl -X POST "https://api.render.com/v1/services/srv-crnbq3l6l47c73ad3lc0/deploys" \
-        -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
-        -H "Content-Type: application/json" \
-        -d '{}'
+          curl --request POST \
+          --url https://api.render.com/v1/services/srv-crnbq3l6l47c73ad3lc0/deploys \
+          --header 'accept: application/json' \
+          --header 'content-type: application/json' \
+          --data '
+          {
+            "clearCache": "do_not_clear"
+          }'
