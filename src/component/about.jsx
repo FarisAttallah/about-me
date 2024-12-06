@@ -7,7 +7,7 @@ const About = () => {
       <div className="flex-about">
         <div className="about-text">
           <p>
-          As a developer, I bring a dynamic and adaptable skill set to the field.
+          AAAAAAAAAAAAAAAAAAAs a developer, I bring a dynamic and adaptable skill set to the field.
           My experience as a technology intern at M&T Bank involved comprehensive full-stack development, 
           allowing me to hone my abilities across various aspects of the software development lifecycle. 
           My proficiency extends to web development, where I&apos;ve worked with technologies like JavaScript, Node.js, HTML, and CSS.
