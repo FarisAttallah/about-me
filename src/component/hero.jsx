@@ -5,11 +5,9 @@ const Hero = () => {
     <div className="hero-container">
       <Image src='/images/devicon.jpg' className="profile-img" width={300} height={300} alt="Faris's personal headshot" />
       <div className="hero-text">
-        <div className="wrapper">
-        <div className="intro-wrapper"><h1>Hey, I&apos;m Faris Attallah 👋</h1></div>
-        </div>
+          <div className="intro-wrapper"><h1>Hey, I&apos;m Faris Attallah 👋</h1></div>
         <p>
-        Enthusiastic and skilled full-stack developer with hands-on experience in building robust backend infrastructure and user-friendly interfaces, complemented by effective communication and collaboration within cross-functional teams.
+          Enthusiastic and skilled full-stack developer with hands-on experience in building robust backend infrastructure and user-friendly interfaces, complemented by effective communication and collaboration within cross-functional teams.
         </p>
         <div className="social-icons">
           <a

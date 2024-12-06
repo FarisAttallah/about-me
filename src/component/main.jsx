@@ -18,7 +18,7 @@ const Main = () => {
         <Skills />
         <Contact/>
         </div>
-        <div className='container center                                                                                                                                                                                                                                                                                                                '>
+        <div className='container center '>
           <Hero />
         </div>
         <div className='container right' >

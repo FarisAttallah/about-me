@@ -14,24 +14,33 @@
 /* Wrapper for the intro text */
 .intro-wrapper {
   display: flex;
-  font-size: 1em;
+  font-size: .9rem;
   font-family: "Courier", monospace; /* Typewriter-style font */
-  white-space: nowrap; /* Prevent wrapping of the text */
   overflow: hidden; /* Hide the text initially */
-  border-right: 3px solid; /* Create the blinking cursor effect */
-  animation: typing 3s steps(30, end), blink-caret 0.4s step-end infinite; /* Animate typing and caret blinking */
-  margin-left: 5em;
-  margin-right: 5em;
+  border-right: .1rem solid; /* Create the blinking cursor effect */
+  animation: typing 3s steps(30, end), blink-caret 0.4s step-end infinite; /* Combine animations */
+  margin-left: 25%;
+  margin-right: 5%;
   border-color: transparent;
+  white-space: nowrap;
 }
+@media (max-width: 768px) {
+  .intro-wrapper {
+    white-space: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+    animation: typing 3s steps(26, end), blink-caret 0.4s step-end infinite; /* Combine animations */
 
+    /* Discord dark background color */
+  }
+}
 /* Typing keyframes */
 @keyframes typing {
   from {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 35ch;
   } /* Adjust this width based on the number of characters */
 }
 
@@ -57,13 +66,13 @@
 }
 body {
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   background-color: rgb(74, 250, 232);
   /* Discord dark background color */
   color: beige;
   /* Light text color */
-  margin: 2rem;
+  margin: 1%;
   /* Adjust margin as needed */
   padding: 0;
   background: linear-gradient(180deg, #1d3557, #a8dadc, #f1faee);
@@ -141,7 +150,7 @@ li {
   /* background-color: #FFCC1A;
     color: #1D1E20; */
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.5s ease-in-out;
@@ -161,10 +170,10 @@ hr {
   border: none;
   background-color: #58626f;
   /* Discord footer hr color */
-  height: 1px;
+  height: .1rem;
   width: 80%;
   
-  margin: 2rem auto 1rem auto;
+  margin: 1% auto 1% auto;
 
 }
 .fullHeight {
@@ -187,7 +196,10 @@ hr {
 
 @media (max-width: 768px) {
   .footer-container {
-    grid-row: 3; /* Discord dark background color */
+    grid-row: 4; /* Discord dark background color */
+  }
+  .about-container.container {
+    height: 100%;
   }
 }
 .footer-container p {
@@ -216,13 +228,13 @@ hr {
 }
 
 .container {
-  border-radius: 5px;
-  box-shadow: 5px 5px 15px rgb(0 0 0 / 50%);
+  border-radius: .8rem;
+  box-shadow: 1rem 1rem 3rem rgb(0 0 0 / 50%);
   width: 100%;
   height: 90%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  padding: 1.5rem;
+  margin-bottom: .5%;
+  margin-top: .5%;
 }
 .container-3-columns {
   display: grid;
@@ -245,6 +257,17 @@ hr {
   .container-3-columns > div {
     margin: 0 auto; /* Center-aligns the content */
   }
+  body{
+    background: linear-gradient(180deg, #c4c9d1, #a8dadc, #f1faee);
+
+  }
+  * {
+    font-size: small;
+  }
+  h1 {
+    font-size:2rem;
+  }
+
 }
 
 .center {
@@ -255,7 +278,7 @@ hr {
   background-size: cover;
   background-position: bottom;
   grid-area: center;
-  height: 70%;
+
 }
 
 .left {
@@ -296,21 +319,10 @@ hr {
 }
 
 .about-container.container {
-  padding: 2rem;
-  margin-bottom: 2rem;
+  padding: 1%;
+  margin-bottom: 1%;
 }
 
-.about-text-card {
-  border-radius: 1rem;
-  border-width: 2rem;
-  border-color: #264de4;
-  height: 4rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: #8d8f93;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
-  color: #1d1e20;
-}
 
 ol {
   list-style: decimal-leading-zero;
@@ -322,9 +334,9 @@ li {
   position: relative;
   counter-increment: list;
   max-width: 45rem;
-  margin: 2rem 0 0 0;
-  padding: 2rem 1rem 1rem;
-  box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+  margin: 3% 0 0 0;
+  padding: 3% 2% 2%;
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.3);
   border-radius: 0.5rem;
 }
 
@@ -340,7 +352,7 @@ li {
 
 .about-list {
   list-style-type: upper-roman;
-  border: 2px solid #dadadb;
+  border: .15rem solid #dadadb;
   transition: all 0.5s ease-in-out;
   color: #1d1e20;
   background-color: rgb(250, 250, 247);
@@ -357,13 +369,13 @@ li:hover {
 }
 
 .skills-container.container {
-  padding: 2rem;
-  margin-bottom: 2rem;
+  padding: 5%;
+  margin-bottom: 3%;
 }
 
 .projects-container.container {
-  padding: 2rem;
-  margin-bottom: 2rem;
+  padding: 5%;
+  margin-bottom: 3%;
 }
 
 /* Navbar */
@@ -375,14 +387,14 @@ li:hover {
   background-color: #262f4b;
   /* Discord dark background color */
   width: 100%;
-  margin-bottom: 2rem;
-  border-radius: 5px;
-  box-shadow: 5px 5px 15px rgb(0 0 0 / 50%);
+  margin-bottom: 2%;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 3rem rgb(0 0 0 / 50%);
   width: 100%;
-  padding: 1rem;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  padding: 1%;
+  padding-left: 1%;
+  margin-bottom: 1%;
+  margin-top: 1%;
   /* background-color: #1D1E20; */
 }
 
@@ -394,12 +406,12 @@ li:hover {
   
   align-items: center;
   flex-direction: column;
-  padding: 4rem;
+  padding: 7%;
 }
 
 .hero-container .profile-img {
-  width: 200px;
-  height: 200px;
+  width: 21%;
+  height: 21%;
   border-radius: 50%;
   margin: 0 auto;
   object-fit: cover;
@@ -407,20 +419,16 @@ li:hover {
 
 .hero-container .hero-text {
   text-align: center;
-  margin: 1rem 0;
+  margin: 1% 0;
   width: 80%;
 }
 
-.hero-container .hero-text h2 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
+
 
 .hero-container .hero-text p {
   font-size: 1.2rem;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 5%;
 }
 
 .hero-container .social-icons {
@@ -428,79 +436,33 @@ li:hover {
   justify-content: center;
   align-items: center;
   gap: 0 1rem;
+  
 }
 
 .hero-container .social-icons a {
   color: #9b9c9d;
-  font-size: 1.5rem;
+  font-size: 5rem;
   transition: all 0.5s ease-in-out;
 }
 
-/* About */
-.about-container {
-  padding: 0.5rem;
-}
-
-.about-container h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.about-container .flex-about {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0 2rem;
-}
-
-.about-container .flex-about .about-text {
-  width: 50%;
-}
-
-.about-container .flex-about .about-text p {
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-.about-container .flex-about .about-img {
-  width: 50%;
-}
-
-.about-container .flex-about .about-img .profile-img {
-  overflow: hidden;
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  border: 2px solid #dadadb;
-  filter: grayscale(100%);
-  transition: all 0.5s ease-in-out;
-  cursor: cell;
-}
-
-.about-container .flex-about .about-img .profile-img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.02);
-}
 
 li {
   display: list-item;
   list-style-type: disc;
   /* Use disc for filled circles, change to other values like square or none if desired */
-  margin-left: 5rem;
+  margin-left: 7%;
   /* Adjust the margin as needed */
 }
 
 /* Skills */
 .skills-container {
-  padding: 1rem;
+  padding: 1%;
 }
 
 .skills-container h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 5%;
 }
 
 .skills-container .grid-skills {
@@ -515,19 +477,7 @@ li {
   gap: 2rem;
 }
 
-.skills-container .grid-languages .skill-card {
-  background-color: #ffffff;
-  color: #1d1e20;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 1rem;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.5s ease-in-out;
-  cursor: context-menu;
-}
+
 
 .skills-container .grid-languages i {
   font-size: 1.5rem;
@@ -540,20 +490,20 @@ li {
   justify-content: center;
   align-items: center;
   gap: 0 1rem;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 7%;
+  border-radius: 1.4rem;
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease-in-out;
   cursor: context-menu;
 }
 .zoom-effect {
   transition: transform 0.3s ease, border 0.3s ease;
-  border: 2px solid transparent;
+  border: .2rem solid transparent;
 }
 
 .zoom-effect:hover {
   transform: scale(1.1);
-  border: 2px solid #007bff; /* Adds a border on hover */
+  border: .2rem solid #007bff; /* Adds a border on hover */
 }
 
 .skills-container .grid-skills i {
@@ -566,13 +516,13 @@ li {
 
 /* Projects */
 .projects-container {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .projects-container h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 10%;
 }
 
 .projects-grid {
@@ -588,9 +538,9 @@ li {
 }
 
 .project-card {
-  border: 1px solid #e6e6e6;
-  padding: 20px;
-  border-radius: 5px;
+  border: .2rem solid #e6e6e6;
+  padding: 5%;
+  border-radius: 1.8rem;
   height: fit-content;
   background-color: #ffffff;
   color: #1d1e20;
@@ -600,40 +550,28 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 3%;
 }
 
 .project-card .folder-icon {
-  font-size: 35px;
+  font-size: 2.5rem;
   color: #ffcc17;
 }
 
 .project-header .small-icons {
   display: flex;
   color: blue;
-  gap: 0 5px;
+  gap: 0 1rem;
 }
 
 .project-card .small-icons a {
-  margin-right: 5px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
 
-.project-card .project h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.project-card .project p {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #b3b3b3;
-}
-
 /* contact */
 .contact-container {
-  padding: 2rem 0 4rem;
+  padding: 8% 0 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -645,28 +583,28 @@ li {
 .contact-container h2 {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 3%;
 }
 
 .contact-container p {
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 5%;
   text-align: center;
 }
 .say-hello-button {
   background-color: #007bff;
   color: white;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 5% 5%;
+  font-size: 1.5rem;
   border: none;
-  border-radius: 5px;
+  border-radius: .9rem;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 .4rem .5rem rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .say-hello-button:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.4);
   transform: scale(1.05); /* Grows the button size slightly */
 }
