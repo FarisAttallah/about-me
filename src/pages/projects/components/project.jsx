@@ -7,7 +7,9 @@ const Project = ({ projectId }) => {
   const {projectData, setProjectData} = useContext(Project_data);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch('http://127.0.0.1:8000/api/projects/'); // Replace with your API route
+      const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL + '/projects/';
+
+      const res = await fetch(apiUrl); // Replace with your API route
       const projectData = await res.json();
       setProjectData(projectData);
     };
