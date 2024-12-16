@@ -1,6 +1,6 @@
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Main from '../component/main';
+import Main from '../app/main';
 
 import Loading from '../component/loading';
 import React, { useState, useEffect } from 'react';

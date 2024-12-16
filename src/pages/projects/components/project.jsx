@@ -1,8 +1,23 @@
 import React from 'react';
-import { projectData } from '../../../component/data';
+import { Project_data } from '../../../context/Context';
+import { useContext, useEffect} from "react";
+
 
 const Project = ({ projectId }) => {
-  const project = projectData.find((project) => project.id == projectId);
+  const {projectData, setProjectData} = useContext(Project_data);
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch('http://127.0.0.1:8000/api/projects/'); // Replace with your API route
+      const projectData = await res.json();
+      setProjectData(projectData);
+    };
+
+    fetchData();
+  }, []);
+  let project = {};
+  if (projectData) {
+    project = projectData.find((project) => project.id == projectId);
+  }
   const { title, details, languages, technologies } = project || {};  // Default to an empty object if no project is found
   
   return (

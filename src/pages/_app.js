@@ -1,8 +1,7 @@
 import '../styles/globals.css';
-import Layout from '../component/layout';
-import Loading from '../component/loading';
-import React, { useState, useEffect } from 'react';
-
+import Layout from '../app/layout.tsx';
+import { useState, useEffect } from 'react';
+import Context from '../context/Context.js'
 export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -14,9 +13,14 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-  
-    </Layout>
+
+
+
+      <Context>
+
+        <Component {...pageProps} />
+      </Context>
+
+
   );
 }
