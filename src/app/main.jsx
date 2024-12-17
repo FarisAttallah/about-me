@@ -19,7 +19,7 @@ const Main = () => {
       try {
         console.log(process.env.NEXT_PUBLIC_API_BASE_URL)
 
-        const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL + 'api/projects/';
+        const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL + '/api/projects/';
 
         const res = await fetch(apiUrl); // Replace with your API route
         const projectData = await res.json();
