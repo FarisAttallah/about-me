@@ -43,6 +43,8 @@ const Form = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            console.log(process.env.NEXT_PUBLIC_API_BASE_URL)
+
             const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL + '/project/';
             const response = await fetch(apiUrl, {
             method: 'POST',
