@@ -1,7 +1,7 @@
 import React from 'react';
 import { Project_data } from '../../../context/Context';
 import { useContext, useEffect} from "react";
-
+import {projectDataDefault} from '../../../component/data.js'
 
 const Project = ({ projectId }) => {
   const {projectData, setProjectData} = useContext(Project_data);
@@ -9,10 +9,15 @@ const Project = ({ projectId }) => {
     const fetchData = async () => {
       console.log(process.env.NEXT_PUBLIC_API_BASE_URL)
       const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL + '/api/projects/';
+      try {
+        const res = await fetch(apiUrl); // Replace with your API route
+        const projectData = await res.json();
+        setProjectData(projectData);
 
-      const res = await fetch(apiUrl); // Replace with your API route
-      const projectData = await res.json();
-      setProjectData(projectData);
+      } catch {
+        setProjectData(projectDataDefault)
+      }
+      
     };
 
     fetchData();

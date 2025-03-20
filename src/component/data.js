@@ -1,4 +1,4 @@
-export const projectData = [
+export const projectDataDefault = [
     {
         id: 1,
         title: 'Integration Testing framework',

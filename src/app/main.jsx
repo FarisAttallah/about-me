@@ -7,6 +7,8 @@ import React from 'react';
 import Footer from '../component/footer';
 import Navbar from '../component/navbar'
 import { Project_data } from '../context/Context'
+import {projectDataDefault} from '../component/data.js'
+
 
 import { useContext,useEffect } from "react";
 
@@ -25,6 +27,7 @@ const Main = () => {
         const projectData = await res.json();
         setProjectData(projectData);
       } catch {
+                setProjectData(projectDataDefault)
           console.log('error while fetching projects')
       }
     };
