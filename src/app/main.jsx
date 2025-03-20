@@ -25,9 +25,12 @@ const Main = () => {
 
         const res = await fetch(apiUrl); // Replace with your API route
         const projectData = await res.json();
-        setProjectData(projectData);
+        if (Array.isArray(projectData) && projectData.length === 0) {
+          console.log("The API returned an empty list. Setting default value");
+          setProjectData(projectDataDefault)
+      }
       } catch {
-                setProjectData(projectDataDefault)
+          setProjectData(projectDataDefault)
           console.log('error while fetching projects')
       }
     };
